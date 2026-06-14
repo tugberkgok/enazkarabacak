@@ -772,7 +772,79 @@ section { padding: var(--gap) clamp(1.5rem, 5vw, 4rem); }
   font-size: .78rem; font-weight: 500;
 }
 
-/* ── FOOTER ── */
+/* ── SSS ── */
+#sss { background: var(--white); }
+
+.sss-grid {
+  display: flex; flex-direction: column; gap: .6rem;
+  max-width: 780px;
+}
+
+.sss-item {
+  border-radius: 14px;
+  border: 1.5px solid var(--sage-light);
+  overflow: hidden;
+  transition: box-shadow .2s;
+  background: var(--white);
+}
+.sss-item:hover { box-shadow: 0 4px 20px rgba(45,74,48,.08); }
+
+.sss-header {
+  width: 100%; background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.15rem 1.4rem;
+  text-align: left; gap: 1rem;
+}
+.sss-q {
+  font-family: var(--serif);
+  font-size: 1rem; font-weight: 500;
+  color: var(--forest); line-height: 1.4; flex: 1;
+}
+.sss-icon {
+  width: 26px; height: 26px; border-radius: 50%; flex-shrink: 0;
+  border: 1.5px solid var(--sage);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--sage); font-size: 1rem; font-weight: 300;
+  transition: transform .3s, background .2s;
+}
+.sss-item.open .sss-icon {
+  transform: rotate(45deg);
+  background: var(--sage); color: white;
+}
+.sss-body {
+  display: none;
+  padding: 0 1.4rem 1.2rem;
+}
+.sss-item.open .sss-body { display: block; }
+.sss-body p {
+  font-size: .9rem; color: var(--muted); line-height: 1.8;
+}
+
+/* ── KVKK ── */
+#kvkk {
+  background: var(--butter);
+  border-top: 1px solid var(--butter-deep);
+}
+.kvkk-inner {
+  max-width: 780px;
+  display: flex; gap: 1.2rem; align-items: flex-start;
+}
+.kvkk-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--sage-pale); border: 1px solid var(--sage-light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0; margin-top: .15rem;
+}
+.kvkk-text h4 {
+  font-family: var(--serif);
+  font-size: .95rem; font-weight: 600;
+  color: var(--forest); margin-bottom: .5rem;
+}
+.kvkk-text p {
+  font-size: .82rem; color: var(--muted); line-height: 1.8;
+}
+
+
 footer {
   background: var(--forest);
   color: rgba(253,250,246,.45);
@@ -876,14 +948,7 @@ footer a { color: var(--sage-light); text-decoration: none; }
   <div class="hero-visual">
     <div class="hero-photo-container">
       <div class="hero-photo-mask">
-        <!-- <img src="foto.jpg" alt="Elif Nazlı Karabacak"> -->
-        <div class="hero-photo-placeholder">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-            <circle cx="32" cy="22" r="12" stroke="#7A6A5A" stroke-width="1.5"/>
-            <path d="M8 56c0-13.3 10.7-24 24-24s24 10.7 24 24" stroke="#7A6A5A" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <p>Fotoğraf<br>eklenecek</p>
-        </div>
+        <img src="photo.jpeg" alt="Elif Nazlı Karabacak">
       </div>
 
       <div class="float-card float-card-1">
@@ -924,6 +989,7 @@ footer a { color: var(--sage-light); text-decoration: none; }
           <span class="tag">Şema Terapi</span>
           <span class="tag">ACT</span>
           <span class="tag">Mindfulness</span>
+          <span class="tag">EMDR</span>
           <span class="tag">Travma</span>
           <span class="tag">Somatik Çalışma</span>
           <span class="tag">Masal Terapisi</span>
@@ -938,108 +1004,6 @@ footer a { color: var(--sage-light); text-decoration: none; }
             <span class="stat-num">20+</span>
             <span class="stat-lbl">Sertifika</span>
           </div>
-          <div class="stat-box">
-            <span class="stat-num">3</span>
-            <span class="stat-lbl">Format</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="reveal reveal-delay-2">
-        <div class="pill-label">📚 Eğitim & Sertifikalar</div>
-        <div class="edu-accordion">
-
-          <div class="edu-item">
-            <button class="edu-header">
-              <span class="edu-emoji">🧩</span>
-              <span class="edu-header-text">Terapi Yaklaşımları</span>
-              <span class="edu-chevron">+</span>
-            </button>
-            <div class="edu-body">
-              <ul class="edu-list">
-                <li>Şema Terapi Uygulayıcı Eğitimi — İzmir Psikoloji Enstitüsü</li>
-                <li>Oyun Terapisi Uygulayıcı Eğitimi — İstanbul Üniversitesi</li>
-                <li>Masal Terapi Uygulayıcı Eğitimi — Ömer Aktürk</li>
-                <li>Cinsel Terapi Uygulayıcı Eğitimi — Seda Keskin</li>
-                <li>Kabul ve Kararlılık Terapisi (ACT) — İzmir Psikoloji Enstitüsü</li>
-                <li>Sanatla Terapi Uygulayıcı Eğitimi — Boğaziçi Enstitüsü</li>
-                <li>Çözüm Odaklı Terapi Eğitimi — Ümüt Arslan</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="edu-item">
-            <button class="edu-header">
-              <span class="edu-emoji">🧘</span>
-              <span class="edu-header-text">Mindfulness & Beden</span>
-              <span class="edu-chevron">+</span>
-            </button>
-            <div class="edu-body">
-              <ul class="edu-list">
-                <li>Bireysel ve Toplumsal Mindfulness — Jon Kabat-Zinn</li>
-                <li>Travmaya Duyarlı Mindfulness — Zümra Atalay</li>
-                <li>MBCL — Mindfulness Temelli Şefkatli Yaşam</li>
-                <li>MBSR — Mindfulness Temelli Stres Azaltma</li>
-                <li>Advayta Yoga Eğitmenliği (200 saat)</li>
-                <li>Somatik Kaynaklarla Stabilizasyon — Jennifer Gardner</li>
-                <li>Travma ve Beden — Pat Ogden & Jennifer Gardner</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="edu-item">
-            <button class="edu-header">
-              <span class="edu-emoji">💜</span>
-              <span class="edu-header-text">Travma & Kriz</span>
-              <span class="edu-chevron">+</span>
-            </button>
-            <div class="edu-body">
-              <ul class="edu-list">
-                <li>Travma ve Psikososyal Müdahale — Türk PDR Derneği</li>
-                <li>Travma ve Yas — Mustafa Uslu</li>
-                <li>Travmada Erken Psikolojik Müdahaleler — Hakan Türkçapar</li>
-                <li>Afet Döneminde Ruh Sağlığı — Yankı Yazgan</li>
-                <li>Deprem Sonrası: Çocuklar için Yol Haritası</li>
-                <li>Depremden Etkilenen Çocuklar ile Temas — Nilüfer Devecigil</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="edu-item">
-            <button class="edu-header">
-              <span class="edu-emoji">📋</span>
-              <span class="edu-header-text">Psikolojik Testler</span>
-              <span class="edu-chevron">+</span>
-            </button>
-            <div class="edu-body">
-              <ul class="edu-list">
-                <li>WISC-R 4 / AGTE / Ankara Gelişim Envanteri</li>
-                <li>D2 Dikkat Testi / Metropolitan Okul Olgunluğu Ölçeği</li>
-                <li>Frosting Görsel Algı Testi</li>
-                <li>Bender Gestalt Görsel Motor Algılama Testi</li>
-                <li>Good-Enough Harris İnsan Çiz Testi</li>
-                <li>Cattell 2A-3A / Gessel Gelişim Figürleri</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="edu-item">
-            <button class="edu-header">
-              <span class="edu-emoji">🌍</span>
-              <span class="edu-header-text">Projeler & Gönüllülük</span>
-              <span class="edu-chevron">+</span>
-            </button>
-            <div class="edu-body">
-              <ul class="edu-list">
-                <li>Depremzede Çocuklara Mektup Arkadaşlığı — Proje Lideri (2023-24)</li>
-                <li>TÜBİTAK 2209-A Projesi — Proje Lideri (2021-22)</li>
-                <li>UPÖY İzmir Yerel Yapılanma Temsilcisi (2021-22)</li>
-                <li>PDOK Üniversite Proje Temsilcisi (2020-22)</li>
-                <li>İzmir Demokrasi Üniversitesi PDR Topluluğu — Kurucu Üye</li>
-              </ul>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -1055,10 +1019,32 @@ footer a { color: var(--sage-light); text-decoration: none; }
     </h2>
 
     <div class="work-tabs reveal reveal-delay-2">
-      <button class="wtab" data-wtab="bireysel-cocuk">🧒 Çocuklar — Bireysel</button>
-      <button class="wtab" data-wtab="grup-cocuk">👫 Çocuklar — Grup</button>
       <button class="wtab active" data-wtab="yetiskin">🧑 Yetişkinler</button>
+      <button class="wtab" data-wtab="ergen">🎒 Ergenler</button>
+      <button class="wtab" data-wtab="bireysel-cocuk">🧒 Çocuklar</button>
       <button class="wtab" data-wtab="seminer">🎤 Seminer & Webinar</button>
+    </div>
+
+    <div class="wtab-panel active" id="wtab-yetiskin">
+      <div class="cards-grid">
+        <div class="work-card reveal"><div class="wc-icon">💑</div><div class="wc-title">İlişki Güçlükleri</div><div class="wc-desc">Kişilerarası ilişkiler, iletişim sorunları, bağlanma</div></div>
+        <div class="work-card reveal reveal-delay-1"><div class="wc-icon">😟</div><div class="wc-title">Kaygı Bozuklukları</div><div class="wc-desc">Sosyal fobi, panik bozukluk, anksiyete, takıntılar</div></div>
+        <div class="work-card reveal reveal-delay-2"><div class="wc-icon">🌊</div><div class="wc-title">Duygu Düzenleme</div><div class="wc-desc">Duygu durum dalgalanmaları, duygusal ifade güçlükleri</div></div>
+        <div class="work-card reveal reveal-delay-3"><div class="wc-icon">⚡</div><div class="wc-title">Öz-denetim Sorunları</div><div class="wc-desc">Erteleme, sabırsızlık, kararsızlık, motivasyon</div></div>
+        <div class="work-card reveal"><div class="wc-icon">📖</div><div class="wc-title">Sınav & Performans Kaygısı</div><div class="wc-desc">Dikkat ve odaklanma problemleri, verimlilik</div></div>
+        <div class="work-card reveal reveal-delay-1"><div class="wc-icon">💜</div><div class="wc-title">Değersizlik & Utanç</div><div class="wc-desc">Suçluluk, öfke, mutsuzluk ve depresif belirtiler</div></div>
+      </div>
+    </div>
+
+    <div class="wtab-panel" id="wtab-ergen">
+      <div class="cards-grid">
+        <div class="work-card reveal"><div class="wc-icon">📚</div><div class="wc-title">Sınav ve Gelecek Kaygısı</div><div class="wc-desc">Sınav süreçleri, akademik beklentiler ve geleceğe dair belirsizliklerin yarattığı stresi yönetebilmek ve kaygıyla baş etmek için destek sağlıyorum.</div></div>
+        <div class="work-card reveal reveal-delay-1"><div class="wc-icon">🤝</div><div class="wc-title">Akran İlişkileri ve Sosyal Kaygı</div><div class="wc-desc">Arkadaş gruplarına uyum sağlama, kabul edilmeme korkusu ve sosyal ortamlarda kendini rahatça ifade edebilme becerilerini güçlendiriyoruz.</div></div>
+        <div class="work-card reveal reveal-delay-2"><div class="wc-icon">🌊</div><div class="wc-title">Duygu Düzenleme ve Öfke Kontrolü</div><div class="wc-desc">Bu dönemde yaşanan ani duygu dalgalanmalarını, yoğun öfke patlamalarını veya mutsuzluk hissini sağlıklı yollarla anlamlandırmayı ve yönetmeyi hedefliyoruz.</div></div>
+        <div class="work-card reveal reveal-delay-3"><div class="wc-icon">🌟</div><div class="wc-title">Kimlik Arayışı ve Özgüven</div><div class="wc-desc">Kendini tanıma, güçlü bir benlik algısı geliştirme, beden imajı kaygıları ve özgüven sorunları üzerinde çalışarak bireysel gelişimi destekliyoruz.</div></div>
+        <div class="work-card reveal"><div class="wc-icon">👨‍👩‍👧</div><div class="wc-title">Aile İçi İletişim Sorunları</div><div class="wc-desc">Bağımsızlık kazanma sürecindeki gençler ile ebeveynler arasında yaşanan sınır, kural ve iletişim çatışmalarını sağlıklı bir uzlaşma zeminine taşıyoruz.</div></div>
+        <div class="work-card reveal reveal-delay-1"><div class="wc-icon">⚡</div><div class="wc-title">Motivasyon ve Erteleme Davranışı</div><div class="wc-desc">Ders çalışmaya odaklanma güçlüğü, akademik motivasyon kaybı ve sürekli erteleme sorunlarında içsel motivasyonu artıracak yolları keşfediyoruz.</div></div>
+      </div>
     </div>
 
     <div class="wtab-panel" id="wtab-bireysel-cocuk">
@@ -1071,26 +1057,6 @@ footer a { color: var(--sage-light); text-decoration: none; }
         <div class="work-card reveal reveal-delay-1"><div class="wc-icon">🤝</div><div class="wc-title">Sosyal Beceriler</div><div class="wc-desc">Akran ilişkileri, sosyal beceri kazanımı</div></div>
         <div class="work-card reveal reveal-delay-2"><div class="wc-icon">👨‍👩‍👧</div><div class="wc-title">Ebeveyn-Çocuk İlişkisi</div><div class="wc-desc">Bağlanma sorunları, pozitif disiplin, aile içi sınırlar</div></div>
         <div class="work-card reveal reveal-delay-3"><div class="wc-icon">📋</div><div class="wc-title">Psikolojik Testler</div><div class="wc-desc">AGTE, WISC-R 4, Dikkat Testi ve kapsamlı değerlendirmeler</div></div>
-      </div>
-    </div>
-
-    <div class="wtab-panel" id="wtab-grup-cocuk">
-      <div class="cards-grid">
-        <div class="work-card reveal"><div class="wc-icon">🔒</div><div class="wc-title">Mahremiyet Eğitimi</div><div class="wc-desc">Çocuklara uygun beden ve mahremiyet farkındalığı</div></div>
-        <div class="work-card reveal reveal-delay-1"><div class="wc-icon">🧘</div><div class="wc-title">Mindfulness Çalışmaları</div><div class="wc-desc">Beden ve duygu odaklı grup mindfulness seansları</div></div>
-        <div class="work-card reveal reveal-delay-2"><div class="wc-icon">🌱</div><div class="wc-title">Sosyal Beceri Eğitimleri</div><div class="wc-desc">Grup dinamiği içinde sosyal beceri geliştirme</div></div>
-        <div class="work-card reveal reveal-delay-3"><div class="wc-icon">📚</div><div class="wc-title">Psiko-eğitimler</div><div class="wc-desc">Yaş grubuna uygun psikolojik eğitim programları</div></div>
-      </div>
-    </div>
-
-    <div class="wtab-panel active" id="wtab-yetiskin">
-      <div class="cards-grid">
-        <div class="work-card reveal"><div class="wc-icon">💑</div><div class="wc-title">İlişki Güçlükleri</div><div class="wc-desc">Kişilerarası ilişkiler, iletişim sorunları, bağlanma</div></div>
-        <div class="work-card reveal reveal-delay-1"><div class="wc-icon">😟</div><div class="wc-title">Kaygı Bozuklukları</div><div class="wc-desc">Sosyal fobi, panik bozukluk, anksiyete, takıntılar</div></div>
-        <div class="work-card reveal reveal-delay-2"><div class="wc-icon">🌊</div><div class="wc-title">Duygu Düzenleme</div><div class="wc-desc">Duygu durum dalgalanmaları, duygusal ifade güçlükleri</div></div>
-        <div class="work-card reveal reveal-delay-3"><div class="wc-icon">⚡</div><div class="wc-title">Öz-denetim Sorunları</div><div class="wc-desc">Erteleme, sabırsızlık, kararsızlık, motivasyon</div></div>
-        <div class="work-card reveal"><div class="wc-icon">📖</div><div class="wc-title">Sınav & Performans Kaygısı</div><div class="wc-desc">Dikkat ve odaklanma problemleri, verimlilik</div></div>
-        <div class="work-card reveal reveal-delay-1"><div class="wc-icon">💜</div><div class="wc-title">Değersizlik & Utanç</div><div class="wc-desc">Suçluluk, öfke, mutsuzluk ve depresif belirtiler</div></div>
       </div>
     </div>
 
@@ -1131,8 +1097,8 @@ footer a { color: var(--sage-light); text-decoration: none; }
         <div class="ap-card reveal">
           <div class="ap-num">1</div>
           <div class="ap-info">
-            <h3>Oyun Terapisi</h3>
-            <p>Çocukların kendini doğal olarak ifade ettiği dil olan oyun aracılığıyla duygusal ve davranışsal güçlükleri keşfetmek.</p>
+            <h3>EMDR</h3>
+            <p>Göz hareketleri ve çift yönlü uyarım teknikleriyle, geçmişteki zorlu yaşantıların ve travmatik anıların bugünkü olumsuz etkilerini duyarsızlaştırmak.</p>
           </div>
         </div>
         <div class="ap-card reveal reveal-delay-1">
@@ -1170,7 +1136,87 @@ footer a { color: var(--sage-light); text-decoration: none; }
             <p>Travma ve stresin bedende bıraktığı izleri fark ederek bütüncül bir iyileşme süreci oluşturmak.</p>
           </div>
         </div>
+        <div class="ap-card reveal reveal-delay-2">
+          <div class="ap-num">7</div>
+          <div class="ap-info">
+            <h3>Oyun Terapisi</h3>
+            <p>Çocukların kendini doğal olarak ifade ettiği dil olan oyun aracılığıyla duygusal ve davranışsal güçlükleri keşfetmek.</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SSS -->
+<section id="sss">
+  <div class="container">
+    <div class="pill-label reveal">❓ Sıkça Sorulan Sorular</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Merak<br><em>edilenler</em>
+    </h2>
+    <div class="sss-grid">
+
+      <div class="sss-item reveal">
+        <button class="sss-header">
+          <span class="sss-q">Seans ücretleri ve ödeme koşulları nasıldır?</span>
+          <span class="sss-icon">+</span>
+        </button>
+        <div class="sss-body">
+          <p>Psikolojik danışmanlık sürecinde şeffaflık ve karşılıklı güven en temel ilkelerimizdir. Bireysel online/yüz yüze seans ücreti ön görüşmede paylaşılmaktadır. Ödemeler, randevunuz kesinleştikten sonra seans öncesinde havale/EFT veya güvenli ödeme bağlantısı aracılığıyla alınmaktadır.</p>
+        </div>
+      </div>
+
+      <div class="sss-item reveal reveal-delay-1">
+        <button class="sss-header">
+          <span class="sss-q">Randevumu iptal etmem veya değiştirmem gerekirse ne yapmalıyım?</span>
+          <span class="sss-icon">+</span>
+        </button>
+        <div class="sss-body">
+          <p>Planlanan seans saatleri tamamen size ayrılmıştır. Randevu saatinizde bir değişiklik yapmanız veya seansınızı iptal etmeniz gerekirse, bunu seans saatinden en geç 24 saat öncesine kadar bildirmeniz gerekmektedir. Son 24 saat içerisinde yapılan iptallerde veya seansa mazeretsiz katılım sağlanmaması durumunda, seans ücretinin tamamı tahsil edilmektedir.</p>
+        </div>
+      </div>
+
+      <div class="sss-item reveal reveal-delay-2">
+        <button class="sss-header">
+          <span class="sss-q">Online terapi süreci nasıl işliyor ve verimli oluyor mu?</span>
+          <span class="sss-icon">+</span>
+        </button>
+        <div class="sss-body">
+          <p>Online terapi, yüz yüze terapi ile klinik olarak aynı düzeyde etkililiğe sahiptir. Seanslarımız görüntülü ve şifreli yazılımlar üzerinden gerçekleştirilir. Görüşmelerinizin gizliliği ve kalitesi için seans esnasında yalnız olacağınız sessiz bir oda seçmeniz, güçlü bir internet bağlantısına sahip olmanız ve kulaklık kullanmanız önemle tavsiye edilir.</p>
+        </div>
+      </div>
+
+      <div class="sss-item reveal reveal-delay-3">
+        <button class="sss-header">
+          <span class="sss-q">Paylaştığım bilgiler güvende mi? Gizlilik nasıl sağlanıyor?</span>
+          <span class="sss-icon">+</span>
+        </button>
+        <div class="sss-body">
+          <p>Terapi süreci tamamen gizlilik ve meslek etiği esasına dayanır. Seans esnasında paylaştığınız tüm bilgiler, mesleki etik kurallar ve yasal gizlilik çerçevesinde korunur. Sizin açık onayınız ve yazılı izniniz olmadan seans içerikleri ve kişisel verileriniz hiçbir üçüncü kişi veya kurumla kesinlikle paylaşılmaz.</p>
+        </div>
+      </div>
+
+      <div class="sss-item reveal">
+        <button class="sss-header">
+          <span class="sss-q">Çevrim içi seanslar hangi platformlar üzerinden yapılıyor?</span>
+          <span class="sss-icon">+</span>
+        </button>
+        <div class="sss-body">
+          <p>Görüşmelerimiz, danışan gizliliği ve veri güvenliği standartlarına uygun şifreli altyapıya sahip Zoom veya Google Meet gibi platformlar üzerinden görüntülü olarak gerçekleştirilir. Seans saatiniz geldiğinde size iletilen bağlantı linkine tıklayarak görüşmeye kolayca katılabilirsiniz. Görüşmelerimizin gizliliği ve kalitesi için seans esnasında yalnız olacağınız sessiz bir oda seçmeniz ve kulaklık kullanmanız önem taşımaktadır.</p>
+        </div>
+      </div>
+
+      <div class="sss-item reveal reveal-delay-1">
+        <button class="sss-header">
+          <span class="sss-q">Yüz yüze seanslar nerede yapılıyor?</span>
+          <span class="sss-icon">+</span>
+        </button>
+        <div class="sss-body">
+          <p>Yüz yüze seanslarımı Beylikdüzü ve Bakırköy olmak üzere iki farklı konumda yer alan ofislerimde veriyorum. Ofislerim merkezi konumlarda olup metro, metrobüs ve otobüs gibi toplu taşıma araçlarına yürüme mesafesindedir. Özel araçlarıyla gelen danışanlarımız için de uygun park imkânları mevcuttur.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1342,6 +1388,19 @@ footer a { color: var(--sage-light); text-decoration: none; }
   </div>
 </section>
 
+<!-- KVKK -->
+<section id="kvkk" style="padding: 2.5rem clamp(1.5rem, 5vw, 4rem);">
+  <div class="container">
+    <div class="kvkk-inner reveal">
+      <div class="kvkk-icon">🔒</div>
+      <div class="kvkk-text">
+        <h4>Kişisel Verilerin Korunması (KVKK)</h4>
+        <p>Bu sitedeki iletişim formları ve randevu sistemleri aracılığıyla bizimle paylaştığınız ad, soyad, e-posta ve telefon gibi kişisel verileriniz, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca en yüksek güvenlik standartlarına sahip dijital altyapılarda şifrelenerek saklanmaktadır. Verileriniz sadece sizinle randevu süreçlerini koordine etmek ve yasal faturalandırma işlemlerini gerçekleştirmek amacıyla kullanılır, üçüncü taraflarla kesinlikle paylaşılmaz. Seanslarda paylaşılan her şey mesleki etik çerçevesinde tamamen gizli tutulmaktadır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <p>© 2025 Elif Nazlı Karabacak — Psikolojik Danışman &nbsp;·&nbsp;
@@ -1369,6 +1428,16 @@ document.querySelectorAll('.mobile-link').forEach(l => {
     burger.classList.remove('open');
     mob.classList.remove('open');
     document.body.style.overflow = '';
+  });
+});
+
+// SSS accordion
+document.querySelectorAll('.sss-header').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.sss-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.sss-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
   });
 });
 

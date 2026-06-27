@@ -1961,6 +1961,8 @@ document.querySelectorAll('.dnav-btn').forEach(btn => {
   const dayNamesShort = ['Pzt','Sal','Çar','Per','Cum','Cmt','Paz'];
 
   const today = new Date(); today.setHours(0,0,0,0);
+  const minDate = new Date(today);
+  minDate.setDate(today.getDate() + 2);
   let viewYear = today.getFullYear();
   let viewMonth = today.getMonth();
   let selectedDate = null;
@@ -1993,7 +1995,7 @@ document.querySelectorAll('.dnav-btn').forEach(btn => {
       cell.className = 'cal-day';
       cell.textContent = day;
 
-      if (d < today) {
+      if (d < minDate) {
         cell.classList.add('disabled');
       } else {
         if (d.getTime() === today.getTime()) cell.classList.add('today');

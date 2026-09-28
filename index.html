@@ -1748,19 +1748,7 @@ footer a { color: var(--sage-light); text-decoration: none; }
             <input type="text" id="appt-name" name="appt-name" placeholder="Adınız Soyadınız" required>
           </div>
 
-          <div class="appt-field">
-            <label>İletişim Tercihi</label>
-            <div class="appt-radio-group">
-              <label class="appt-radio">
-                <input type="radio" name="appt-contact-pref" value="telefon" checked>
-                <span>📞 Telefon</span>
-              </label>
-              <label class="appt-radio">
-                <input type="radio" name="appt-contact-pref" value="eposta">
-                <span>✉️ E-posta</span>
-              </label>
-            </div>
-          </div>
+          <input type="hidden" name="appt-contact-pref" value="eposta">
 
           <div class="appt-row">
             <div class="appt-field">
@@ -2084,12 +2072,10 @@ if (apptForm) {
 
     const date = document.getElementById('appt-date').value;
     const time = document.getElementById('appt-time').value;
-    const pref = document.querySelector('input[name="appt-contact-pref"]:checked').value;
-
     const formData = new FormData(apptForm);
     formData.append('Tercih Edilen Tarih', date || 'Belirtilmedi');
     formData.append('Tercih Edilen Saat', time || 'Belirtilmedi');
-    formData.append('İletişim Tercihi', pref === 'telefon' ? 'Telefon' : 'E-posta');
+    formData.append('İletişim Tercihi', 'E-posta');
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Gönderiliyor...';
